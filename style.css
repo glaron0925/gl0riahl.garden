@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Inconsolata", monospace;
+    font-size: 14px;
+    background-color: #fafafa;
+    overflow-x: hidden;
+}
+
+h3, .caption, .item {
+    font-family: "Inconsolata", monospace;
+}
+
+.plantbed {
+    position: absolute;
+    margin-left: 143px;
+    margin-top: 35px;
+    min-height: 100vh;
+}
+
+.item {
+    position: absolute;
+    padding: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    background: #fafafa; /* Crucial so you can't see the image underneath */
+    border: 1px dotted rgba(79, 143, 254, 0.4); /* The "file-gallery" border style */
+    width: max-content;
+}
+
+/* Styling the filename link */
+.item h3 a {
+    color: rgb(84, 136, 226);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.item h3 a:hover {
+    color: rgb(127, 174, 255);
+}
+
+/* Ensure the image stays inside the box boundaries */
+.item img {
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+    height: auto;
+}
+
+h3, .caption {
+    margin: 0;
+    font-size: 1em;
+    font-weight: normal;
+    /* Light blue/grey color for metadata */
+    color: rgba(79, 143, 254, 0.5);
+}
+
+.caption {
+    display: block;
+    margin-bottom: 5px;
+}
+
+pre {
+    margin: 0;
+    font-family: inherit;
+}
+
+a {
+    color: rgb(84, 136, 226);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(127, 174, 255);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* Specific styling for small icons */
+.item img.icon {
+    width: 48px; /* Forces it to stay small */
+    height: 48px;
+}
+
+/* Styling for the scattered words specifically */
+.fridge-mode .item {
+    padding: 3px;
+    font-size: 18px;
+    color: rgba(79, 143, 254, 0.7); /* Faint blue text */
+    background: #fafafa;
+    border: 1px dotted  rgba(79, 143, 254, 0.4); /* Your 40% pink border */
+    cursor: default;
+    min-width: 0; 
+}
+
+/* Container for the nav */
+.fridge-mode .item.nav {
+    font-size: 14px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    z-index: 100; /* Keeps it above the scattered words */
+}
+
+/* The gl0riahl.garden/ link - Darker Blue + Underline */
+.fridge-mode .nav h3 a {
+    color: rgb(84, 136, 226) !important; /* !important ensures it overrides other rules */
+    text-decoration: underline !important;
+    font-weight: normal;
+}
+
+.fridge-mode .nav h3 a:hover {
+    color: rgb(127, 174, 255);
+}
+
+/* The '└── sticky-notes' part */
+.fridge-mode .nav .caption {
+    color: rgba(79, 143, 254, 0.5); 
+}
+
+/* =========================================
+   GALLERY GRID STYLES (For Year Folders)
+========================================= */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates exactly 3 equal columns */
+    gap: 15px; /* The space between the photos */
+    padding-top: 55px; /* Top padding clears the breadcrumb nav */
+    margin-left: -122px;
+    max-width: 1400px;
+}
+
+/* Override the floating behavior for items inside the grid */
+.gallery-grid .item {
+    font-size: 14px;
+    position: relative; /* Stops them from floating randomly */
+    top: auto !important;
+    left: auto !important;
+    width: 100%; /* Make box fill the grid column */
+    box-sizing: border-box;
+    cursor: default; /* Removes the dragging hand cursor */
+}
+
+/* Make sure the images fill their boxes perfectly */
+.gallery-grid .item img {
+    width: 100%;
+    height: auto;
+    margin-top: 3px;
+    display: block;
+}
+
+/* Style for the file size text (e.g., "430kB") */
+.size-text {
+    font-size: 14px;
+    color: rgb(84, 136, 226);
+    text-decoration: none;
+    font-weight: normal;
+}
