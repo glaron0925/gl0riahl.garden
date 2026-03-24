@@ -10,6 +10,7 @@ body {
 
 h3, .caption, .item {
     font-family: "Inconsolata", monospace;
+    color: rgb(67, 67, 67);
 }
 
 .plantbed {
@@ -25,19 +26,19 @@ h3, .caption, .item {
     padding-left: 3px;
     padding-right: 3px;
     background: #fafafa; /* Crucial so you can't see the image underneath */
-    border: 1px dotted rgba(79, 143, 254, 0.4); /* The "file-gallery" border style */
+    border: 1px dotted rgba(244, 163, 132, 0.4); /* The "file-gallery" border style */
     width: max-content;
 }
 
 /* Styling the filename link */
 .item h3 a {
-    color: rgb(84, 136, 226);
+    color: rgb(244, 163, 132);
     text-decoration: underline;
     cursor: pointer;
 }
 
 .item h3 a:hover {
-    color: rgb(127, 174, 255);
+    color: rgb(254, 213, 196);
 }
 
 /* Ensure the image stays inside the box boundaries */
@@ -53,7 +54,7 @@ h3, .caption {
     font-size: 1em;
     font-weight: normal;
     /* Light blue/grey color for metadata */
-    color: rgba(79, 143, 254, 0.5);
+    color: rgba(255, 188, 162, 0.5);
 }
 
 .caption {
@@ -67,13 +68,13 @@ pre {
 }
 
 a {
-    color: rgb(84, 136, 226);
+    color: rgb(254, 213, 196);
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-    color: rgb(127, 174, 255);
+    color: rgb(254, 213, 196);
 }
 
 img {
@@ -91,9 +92,9 @@ img {
 .fridge-mode .item {
     padding: 3px;
     font-size: 18px;
-    color: rgba(79, 143, 254, 0.7); /* Faint blue text */
+    color: rgba(254, 213, 196, 0.7); /* Faint blue text */
     background: #fafafa;
-    border: 1px dotted  rgba(79, 143, 254, 0.4); /* Your 40% pink border */
+    border: 1px dotted  rgba(254, 213, 196, 0.4); /* Your 40% pink border */
     cursor: default;
     min-width: 0; 
 }
@@ -109,18 +110,18 @@ img {
 
 /* The gl0riahl.garden/ link - Darker Blue + Underline */
 .fridge-mode .nav h3 a {
-    color: rgb(84, 136, 226) !important; /* !important ensures it overrides other rules */
+    color: rgb(244, 163, 132) !important; /* !important ensures it overrides other rules */
     text-decoration: underline !important;
     font-weight: normal;
 }
 
 .fridge-mode .nav h3 a:hover {
-    color: rgb(127, 174, 255);
+    color: rgb(254, 213, 196);
 }
 
 /* The '└── sticky-notes' part */
 .fridge-mode .nav .caption {
-    color: rgba(79, 143, 254, 0.5); 
+    color: rgba(244, 163, 132, 0.5); 
 }
 
 /* =========================================
@@ -158,7 +159,7 @@ img {
 /* Style for the file size text (e.g., "430kB") */
 .size-text {
     font-size: 14px;
-    color: rgb(84, 136, 226);
+    color: rgb(254, 213, 196);
     text-decoration: none;
     font-weight: normal;
 }
